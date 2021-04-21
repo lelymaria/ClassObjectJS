@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>JavaScript Class Object</title>
+    </head>
+    <body> 
+        <form onsubmit="return false">
+            <p> Skincare1 :<input type="text" id="wardah" placeholder ="wardah"></p><br>
+            <p> Skincare2 :<input type="text" id="emina" placeholder="emina"></p><br>
+            <p> Skincare3 :<input type="text" id="avoskin" placeholder="avoskin"></p>
+            <button onclick="klik()">
+                Klik!  
+            </button>
+        </form>
+
+        </p>
+        <script>
+            function klik() {
+                let x = document.getElementById("wardah").value;
+                let y = document.getElementById("emina").value;
+                let i = document.getElementById("avoskin").value;
+
+
+                class Skincare {
+                jenis;
+                harga;
+                wardah;
+                emina;
+                avoskin;
+
+                constructor(jenis, harga, wardah, emina, avoskin) {
+                    this.harga = "Rp. 27500";
+                    this.jenis = "day cream";
+                    this.harga1 = "Rp. 75000";
+                    this.jenis1 = "serum";
+                    this.harga2 = "Rp. 22500";
+                    this.jenis2 = "sunscreen";
+                    this.wardah = x;
+                    this.emina = y;
+                    this.avoskin = i; 
+                }
+        
+                xyuu(wardah) {
+                    console.log( "Merk " + wardah + " ini sangat laku dipasaran karena harganya terjangkau");
+                }
+                yyaa(emina){
+                    console.log("Merk " + emina + " sering dibeli oleh remaja");
+                }
+                iyi(avoskin){
+                    console.log("Texture dari merk " + avoskin + " biasanya itu cair");
+                }
+
+                
+            }
+        
+            let wardah = new Skincare;
+            let  emina = new Skincare;
+            let  avoskin = new Skincare;
+
+            console.log( wardah.xyuu(x));
+            console.log( wardah.jenis);
+            console.log( wardah.harga);
+
+            console.log( emina.yyaa(y));
+            console.log( emina.jenis1);
+            console.log( emina.harga1);
+
+            console.log( avoskin.iyi(i));
+            console.log( avoskin.jenis2);
+            console.log( avoskin.harga2);
+        }
+        </script>
+    </body>
+</html>
